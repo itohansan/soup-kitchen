@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 import { useEffect, useRef, useState } from "react";
 import LiquidGlass from "@/components/LiquidGlass";
 import Hero from "@/components/Hero";

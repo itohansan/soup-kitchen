@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function FAQ() {
   const faqs = [
