@@ -17,6 +17,7 @@ export default function AboutPage() {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const currentImg = imgRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -36,7 +37,7 @@ export default function AboutPage() {
     }
 
     return () => {
-      if (imgRef.current) observer.unobserve(imgRef.current);
+      if (currentImg) observer.unobserve(currentImg);
     };
   }, []);
 

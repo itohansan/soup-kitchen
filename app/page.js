@@ -61,11 +61,12 @@ export default function Home() {
                 WANT MORE RECIPES?
               </h2>
               <p className=" text-[16px] sm:text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4">
-                Subscribe here and we'll send you an email as new recipes are
-                published
+                Subscribe here and we&apos;ll send you an email as new recipes
+                are published
               </p>
               <p className="text-[16px] lg:text-2xl text-center font-extrabold">
-                As a thank you, we'd love to send you our fan favourites ebook!
+                As a thank you, we&apos;d love to send you our fan favourites
+                ebook!
               </p>
 
               <EmailForm />

@@ -89,7 +89,7 @@ bg-center bg-no-repeat bg-cover mb-20"
                 <p className="mt-2 text-center text-[18px] text-[var(--dark-orange)]">
                   <span>Got a delicious recipe? </span>
                   <br className="hidden sm:inline md:hidden" />
-                  <span>We'd love to hear from you!</span>
+                  <span>We&apos;d love to hear from you!</span>
                 </p>
 
                 <p className="mt-3 text-center text-[16px] text-[var(--sunset-orange)]">
