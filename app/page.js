@@ -1,103 +1,79 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { NIGERIAN_SOUPS } from "@/public/assets";
+import EmailForm from "@/components/EmailForm";
+import Socials from "@/components/Socials";
+import NavBar from "@/components/Navbar";
+import Link from "next/link";
+import "animate.css";
+import Hero from "@/components/Hero";
+import SoupList from "@/components/SoupList";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className=" text-emerald-950 w-full h-full ">
+      <Hero>
+        <div
+          className="flex justify-center items-center flex-col 
+      "
+        >
+          <h1 className="text-emerald-950 text-[16px] font-bold sm:text-3xl   ">
+            Soup&nbsp;made&nbsp;simple. Flavor&nbsp;made&nbsp;Nigerian.
+          </h1>
+          <p className="text-[12px] sm:text-[16px] ">
+            Bringing the warmth of homemade soups straight to your doorstep just
+            one click away.
+          </p>
+          {/* click buton */}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className=" justify-center items-center ">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/images/faqL.jpg"
+            alt="Next.js logo"
+            width={380}
+            height={48}
+            priority
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </Hero>
+      <SoupList />
+
+      {/* subscribe */}
+      <section id="subscribe" className="mt-20 scroll-mt-20 h-screen mb-80">
+        <h1 className="text-center uppercase ] text-5xl text-[var(--text-dark)] font-bold mb-10">
+          subscribe
+        </h1>
+
+        <div className="w-[91vw]  rounded-4xl bg-[var(--sunset-orange)] mx-auto mt-20 p-6 ">
+          <div className=" w-full  flex flex-col items-center pt-5 ">
+            <Image
+              src="/images/ingri.jpg"
+              alt="logo"
+              width={200}
+              height={200}
+              className="mb-6"
+            />
+            <div className="w-full px-4">
+              <h2 className="text-2xl font-medium tracking-wider mb-6 text-center">
+                WANT MORE RECIPES?
+              </h2>
+              <p className=" text-[16px] sm:text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4">
+                Subscribe here and we'll send you an email as new recipes are
+                published
+              </p>
+              <p className="text-[16px] lg:text-2xl text-center font-extrabold">
+                As a thank you, we'd love to send you our fan favourites ebook!
+              </p>
+
+              <EmailForm />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <Footer /> */}
     </div>
   );
 }
